@@ -103,7 +103,7 @@ export class Agent {
 
         for(let i = 0; i < this.MAX_LOOP; i++){
             const llmResponse = await this.openai.responses.create({
-                model: 'gpt-4o-mini',
+                model: 'gpt-4o',
                 input: [
                     {role: 'system', content: this.instructions},
                     ...this.messageHistory.map(e => ({role: e.role, content: e.content}))

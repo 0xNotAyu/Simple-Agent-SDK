@@ -46,6 +46,7 @@ export const HARNESS_PROMPT = `
    - "THINK": "We got the weather info"
    - "OUTPUT": "The weather of Goa is sunny with some 30 degree c. Its goona be Hot"
 
+
    Output Format:
   { "step": "INITAL" | "THINK" | "TOOL_REQUEST |"ANALYSE" | "OUTPUT", "text": "<The Actual Text>", "functionName": "<NAME OF FUNCTION>", "input": "INPUT PARAMS of Function" }
 `
