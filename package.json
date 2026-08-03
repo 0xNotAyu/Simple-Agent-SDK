@@ -1,6 +1,6 @@
 {
   "name": "ayu-agent-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ayu Agent Sdk a from-scratch, provider-agnostic TypeScript AI Agent SDK with tools, handoffs, guardrails, memory, structured output, streaming, and tracing.",
   "license": "MIT",
   "author": "Aayush Sharma",
