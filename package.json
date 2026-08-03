@@ -1,7 +1,7 @@
 {
-  "name": "Simple-agent-sdk",
+  "name": "ayu-agent-sdk",
   "version": "0.1.0",
-  "description": "Simple Agent SDK provider-agnostic TypeScript AI Agent SDK with tools, handoffs, guardrails, memory, structured output, streaming, and tracing.",
+  "description": "Ayu Agent SDK provider-agnostic TypeScript AI Agent SDK with tools, handoffs, guardrails, memory, structured output, streaming, and tracing.",
   "license": "MIT",
   "author": "Aayush Sharma",
   "type": "module",
