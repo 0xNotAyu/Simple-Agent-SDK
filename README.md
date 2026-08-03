@@ -1,11 +1,11 @@
-# SIMPLE AGENT SDK
+# AYU AGENT SDK
 
 **A from-scratch, provider-agnostic TypeScript SDK for building AI agents.**
 
 No wrapping of LangChain, CrewAI, or the OpenAI Agents SDK — the agent loop, tool system, handoffs, guardrails, memory, and tracing are all implemented here from first principles. You still bring your own model API client (OpenAI, Anthropic) and validation library (zod) — the *agent behavior* is ours.
 
 ```bash
-npm install simple-agent-sdk
+npm install ayu-agent-sdk
 ```
 
 ```ts
