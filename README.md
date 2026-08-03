@@ -33,42 +33,6 @@ Full docs: [`/docs`](./docs/README.md) · Examples: [`/examples`](./examples)
 
 ---
 
-## The Pitch
-
-### Who it's for
-
-Individual developers and small teams building AI features into real products — not researchers who want a notebook, and not enterprises who've already standardized on a heavyweight platform. If you're a JS/TS developer who wants to ship an agent behind an API route by this afternoon, Ayu is for you.
-
-### The problem
-
-Most agent frameworks make one of two mistakes: they're either **too magical** — the agent loop is buried inside a Python-first framework with dozens of abstraction layers, so debugging "why did my agent call the wrong tool" means reading someone else's source — or **too primitive**, a raw `while` loop around a chat completion call with no tool validation, no session model, no guardrails, and no visibility into what happened during a run.
-
-Ayu sits in between: **transparent enough to fully understand, complete enough to ship.**
-
-### Why it should exist
-
-Because "write your own agent loop" is currently a false choice between reinventing everything (memory, tool validation, retries, tracing) from scratch on every project, or importing a framework so large you don't know what it's doing under the hood. A ~2,000-line, fully-typed, provider-agnostic core is small enough to read in an afternoon and complete enough to not need anything else.
-
-### How it differs from existing SDKs
-
-| | Simple Agent SDK | Typical framework |
-|---|---|---|
-| Core loop | Own implementation, ~one file, readable | Buried across many internal abstractions |
-| Provider lock-in | Abstracted from day one (OpenAI, Claude, +your own) | Often one primary provider, others bolted on |
-| Tool validation | zod-based, typed input **and** output, automatic error containment | Often untyped or loosely validated |
-| State model | Explicit 3-way split: config / run state / session state | Frequently conflated |
-| Tracing | Built-in, structured, JSON-dumpable per run | Often requires a separate paid observability product |
-| Language | TypeScript-first, real inferred types end-to-end | Many are Python-first with thin JS ports |
-
-### Why developers should adopt it
-
-- **You can read the whole agent loop in one sitting** (`src/core/agent.ts`) — no black box.
-- **Type safety from tool input to structured output** — catch mistakes at compile time, not in production logs.
-- **No provider lock-in** — swap OpenAI for Claude with one line; add fallback chains for reliability.
-- **Batteries included, not batteries mandatory** — guardrails, memory, tracing, and handoffs are there when you need them and invisible when you don't.
-
----
-
 ## What's implemented
 
 - ✅ Original agent runtime — accepts input, calls the model, detects tool calls, executes them, feeds results back, loops to a final answer, stops safely on turn limits/timeouts
