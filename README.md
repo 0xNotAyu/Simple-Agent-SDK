@@ -28,7 +28,7 @@ const agent = Agent.builder()
 const result = await agent.run("What is (25 * 4) - 17 / 2?");
 console.log(result.output);
 ```
-
+Hosted docs: `https://ayu-sdk-docs.vercel.app/`
 Full docs: [`/docs`](./docs/README.md) · Examples: [`/examples`](./examples)
 
 ---
